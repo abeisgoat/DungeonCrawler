@@ -1,0 +1,211 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.game {
+    width: 320px;
+    height: 240px;
+    background-color: #111133;
+    position: relative;
+    color: white;
+}
+
+.graphics {
+    width: 204px;
+    height: 138px;
+    border: 2px dashed white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.graphics .wall-right-near {
+    width: 56px;
+    height: 64px;
+    background-image: url(sprites/walls-near.png);
+    position: absolute;
+    top: 36px;
+    left: 0px;
+}
+
+.graphics .wall-near {
+    width: 56px;
+    height: 64px;
+    position: absolute;
+    background-image: url(sprites/walls-near.png);
+}
+
+.graphics .wall-near.path {
+    background-image: url(sprites/walls-path-near.png);   
+}
+
+.graphics .wall-near.right {
+    background-position: -56px 0px;
+    position: absolute;
+    top: 36px;
+    right: 0px;
+}
+
+.graphics .wall-near.left {
+    background-position: -0px 0px;
+    top: 36px;
+    left: 0px;
+}
+
+.graphics .wall-far {
+    width: 28px;
+    height: 32px;
+    position: absolute;
+    background-image: url(sprites/walls-far.png);
+}
+
+.graphics .wall-far.path {
+    background-image: url(sprites/walls-path-far.png);   
+}
+
+.graphics .wall-far.right {
+    background-position: -28px 0px;
+    position: absolute;
+    top: 56px;
+    right: 59px;
+}
+
+.graphics .wall-far.left {
+    background-position: -0px 0px;
+    top: 56px;
+    left: 59px;
+}
+
+.graphics .encounter {
+    width: 52px;
+    height: 52px;
+    background-image: url(sprites/characters.png);
+    background-position: -482px 0px;
+    position: absolute;
+    top: 46px;
+    left: 74px;
+    border: 4px solid #111133;
+}
+
+.text {
+    width: 204px;
+    height: 68px;
+    border: 2px solid white;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 4px;
+}
+
+.text .phrase-line {
+    height: 10px;
+    clear: both;
+    overflow: hidden;
+}
+
+.text .phrase-letter {
+    width: 8px;
+    height: 9px;
+    background-image: url(sprites/font.png);
+    background-repeat: no-repeat;
+    float: left;
+    padding-right: 2px;
+}
+
+.letter.big {
+    height: 18px;
+    width: 16px;
+    background-image: url(sprites/font-large.png);
+}
+
+.map {
+    width: 84px;
+    height: 68px;
+    border: 2px solid white;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.map .map-row {
+    float: left;
+    height: 4px;
+    width: 80px;
+}
+
+.map .map-tile {
+    width: 4px;
+    height: 4px;
+    float: left;
+}
+.map .map-tile.visited {
+     background-color: #B0B0B2;
+}
+
+.map .map-tile.current {
+    background-color: white;   
+}
+
+.stats {
+    width: 84px;
+    height: 106px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.stats .stat {
+    padding: 0px 0px 6px 0px;
+    float: left;
+    clear: both;
+}
+
+.stats .stat div {
+    float: left;
+}
+
+.stats .stat .letter {
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.items {
+    height: 32px;
+    width: 84px;
+    border-top: 2px solid white;
+    position: absolute;
+    right: 10px;
+    top: 116px;
+    padding-top: 4px;
+}
+
+.item {
+    width: 32px;
+    height: 28px;
+    background-image: url(sprites/weapons.png);
+    background-repeat: no-repeat;
+}
+
+.item-slot {
+    width: 28px;
+    height: 28px;
+    background-image: url(sprites/weapons.png);
+    background-repeat: no-repeat;
+    background-position: -892px 0px;
+    float: left;
+}
+/*
+.phrase-letter.ng-enter,
+.phrase-letter.ng-leave {
+  -webkit-transition: 2s linear all;
+  transition: 2s linear all;
+}
+
+.phrase-letter.ng-enter,
+.phrase-letter.ng-leave.ng-leave-active {
+  width: 0px;
+}
+.phrase-letter.ng-leave,
+.phrase-letter.ng-enter.ng-enter-active {
+  width: 8px;
+}*/
