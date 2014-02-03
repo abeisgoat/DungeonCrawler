@@ -33,6 +33,7 @@
     height: 64px;
     position: absolute;
     background-image: url(sprites/walls-near.png);
+    background-repeat: no-repeat;
 }
 
 .graphics .wall-near.path {
@@ -57,6 +58,7 @@
     height: 32px;
     position: absolute;
     background-image: url(sprites/walls-far.png);
+    background-repeat: no-repeat;
 }
 
 .graphics .wall-far.path {
@@ -76,6 +78,18 @@
     left: 59px;
 }
 
+.graphics .wall-back {
+    position: absolute;
+}
+
+.graphics .wall-back {
+    width: 80px;
+    height: 36px;
+    left: 30%;
+    top: 40%;
+    background-image: url(sprites/walls-back.png);  
+}
+
 .graphics .encounter {
     width: 52px;
     height: 52px;
@@ -85,6 +99,59 @@
     top: 46px;
     left: 74px;
     border: 4px solid #111133;
+}
+
+.combat .timebar {
+    height: 6.25%;
+    background-image: url(sprites/grid.png);
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+}
+
+.combat .timebar .time {
+    width: 16px;
+    height: 100%;
+    background-color: purple;
+    position:absolute;
+}
+
+.timebar .time.attack {
+    background-color: white;
+}
+
+.timebar .time.defend {
+    background-color: #111133;
+}
+
+
+.combat .actions {
+    height: 13.28%;
+    width: 100%;
+    position:absolute;
+    bottom: 6.25%;
+}
+
+.icon {
+    position: absolute;
+}
+
+.icon.small {
+    background-image: url(sprites/icons-small.png);
+    width: 6.86%;
+    height: 17px;
+}
+
+.icon.small.attack {
+    background-position: 0px 0px;
+}
+
+.icon.small.defend {
+    background-position: -14px 0px;
+}
+
+.icon.small.select {
+    background-position: -28px 0px;
 }
 
 .text {
@@ -145,6 +212,15 @@
 .map .map-tile.current {
     background-color: white;   
 }
+
+.map .map-tile.solidRock {
+    background-color: red;   
+}
+
+.map .map-tile.solidDirt {
+    background-color: pink;   
+}
+
 
 .stats {
     width: 84px;
